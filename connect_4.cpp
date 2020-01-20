@@ -1,15 +1,12 @@
 #include <iostream>
 #include <cassert>
 
-#ifndef MARMOSET_TESTING
 int main();
-#endif
 bool check_win( char board[][7], char &p_winner);
 void winner_row( char *p_start, char dir );
 void print_board( char board[][7] );
 void input_to_bottom( char board[][7], char player, int column);
 
-#ifndef MARMOSET_TESTING
 int main(){
 	bool win{false}, x{true}, play_again{true};
 	char winner{'n'}, again{};
@@ -62,7 +59,6 @@ int main(){
 		}
 	}
 }
-#endif
 
 void print_board( char board[][7] ){
 	std::cout << "0 1 2 3 4 5 6 " << std::endl;
